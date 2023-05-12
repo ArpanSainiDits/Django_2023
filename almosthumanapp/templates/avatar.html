@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
+    <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Dashboard ecommerce - Vuexy - Bootstrap HTML admin template</title>
+   <!-- BEGIN: links-->
+   {% include "links.html" %}
+    <!-- END: links-->
+        
+      </style>
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
+
+    <!-- BEGIN: Header-->
+    {% include "header.html" %}
+    <!-- END: Header--> 
+    
+    <!-- BEGIN: Main Menu-->
+    {% include "usersidebar.html" %}
+    <!-- END: Main Menu-->
+     <!-- BEGIN: Content-->
+     <div class="app-content content ">
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <div class="content-wrapper container-xxl p-0">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                <!-- Dashboard Ecommerce Starts -->
+                <section id="dashboard-ecommerce">
+                    <div class="row match-height">
+                        <!-- Medal Card -->
+                                  
+                        <div class="row">   
+                            {% for i in avatar %}
+                                <div class="col-md-3" style="padding: 10px;">
+                                    <div style="border: 2px solid #ccc;border-radius: 50px; padding: 5px; background-color: #f1f1f1;">  
+                                    <!--a target="_blank" href="img_5terre.jpg"-->
+                                        <img src={{i}} alt="Cinque Terre" style="width: 100%; height: 200px;" >
+                                      <!--/a-->
+                                    </div>
+                                  </div>
+                                  {% if forloop.counter|divisibleby:4 and not forloop.last %}
+                                    </div><div class="row">
+                                  {% endif %}
+                                {% endfor %}
+                        </div>
+    
+                    <!--/ Revenue Report Card -->
+                </section>    
+                </div>
+
+                
+
+            </div>
+           
+            <!-- Dashboard Ecommerce ends -->
+
+        </div>
+    </div>
+</div>
+{% include "footer.html" %}
+<div class="sidenav-overlay"></div>
+<div class="drag-target"></div>
+
+
+
+<!-- BEGIN: Vendor JS-->
+<script src="/static/app-assets/vendors/js/vendors.min.js"></script>
+<!-- BEGIN Vendor JS-->
+
+<!-- BEGIN: Page Vendor JS-->
+<script src="/static/app-assets/vendors/js/charts/apexcharts.min.js"></script>
+<script src="/static/app-assets/vendors/js/extensions/toastr.min.js"></script>
+<!-- END: Page Vendor JS-->
+
+<!-- BEGIN: Theme JS-->
+<script src="/static/app-assets/js/core/app-menu.js"></script>
+<script src="/static/app-assets/js/core/app.js"></script>
+<!-- END: Theme JS-->
+
+<!-- BEGIN: Page JS-->
+<script src="/static/app-assets/js/scripts/pages/dashboard-ecommerce.js"></script>
+<!-- END: Page JS-->
+
+<script>
+    $(window).on('load', function() {
+        if (feather) {
+            feather.replace({
+                width: 14,
+                height: 14
+            });
+        }
+    })
+</script>
+</body>
+<!-- END: Body-->
+
+</html>
